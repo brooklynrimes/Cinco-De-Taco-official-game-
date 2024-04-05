@@ -1,0 +1,100 @@
+﻿Brooklyn Rimes 
+Cinco De Taco
+04/05/2024
+Move the Cart and Catch the Taco
+
+
+Designing the game 
+* Come up with a theme for your game 
+* Decide what sprites you want to use 
+* Create a diagram for your game 
+   * Describing elements
+   * Sprite types 
+   * Target sprites 
+   * Other special effects 
+* Create a scene for your game 
+   * A theme/ background image 
+* Build your sprites 
+   * Create and test sprites 
+   * Make sure sprites function properly 
+   * Add to code 
+   * My sprites:
+      * KeyPressed: keyPressed () function is called once every time a key is pressed
+      * Collision: detects collision between objects 
+* Import pygame, random, and simpleGE
+   * Random: range of randomness 
+   * simpleGE: Game engine my professor created 
+* Intialize a object that will fall from top of screen  → mines was Taco
+   * I added hot dog as a “challenge” 
+* Create a function for screen and background
+* Set initial attributes and load image
+* Use self.() function for:
+   * Setting image 
+   * Setting image size 
+   * Reset 
+* Create a function for reset →  def reset(self)
+   * This Reset an objects position and velocity
+* Create a function that check boundaries 
+   * This checks if object has reached bottom of screen
+      * If object has reach bottom of the screen, object resets to top of screen
+* Intialize an object that will catch falling objects → cart 
+* Set initial attributes and load image
+* Create function that process cart movement based on user input
+   * This is created by a sprite call KeyPressed 
+      * Use right and left arrow keys to move object 
+* Initalize a lblScore object 
+   * This  label will show your score 
+   * Create a text that sets score to 0 
+   * Center label on screen (your preference )
+* Initalize a lblTime object 
+   * This label will show the remaining time
+   * Create a text for starting time (mines is 10)
+   * Center label on screen (your preference) 
+   * Create a text for ending time (0)
+   * Through your game engine (mines is simple.GE) set self timer
+* Initialize the game scene:
+   * Set background, load images, and create sprite objects
+   * In my code Taco and Hotdog are sprite objects 
+   * Add sound to sprite object(s)
+   * Set timer 
+      * Total time 
+   * Set score 
+   * Set a for loop for sprite object range 
+      * Append to self 
+   * Set score and time label to self 
+   * Create sprite list 
+* Create a Main game loop to handle collisions and play sound
+   * When taco collides with tacocart (set if Statement):
+      * Adds 1 to score 
+      * Plays crunch sound 
+      * Print score to lblscore 
+   * Set self to timer 
+      * f" Time Left: {self.timer.getTimeLeft():.2f}”
+         * .2f sets time for only 2 integers
+      * Set if statement for timeleft < 0 
+      * This will automatically stop the game 
+      * If timeleft is less than and equal to
+         * It will stop game and print out final score f
+   * When hotdog collides with tacocart (set if Statement):
+      * Subtracts 1 from score 
+      * play  an error sound 
+      * Prints score to lbl score 
+* Create Instruction screen 
+   * Set image, status, and score 
+   * Set a multilabel text for instructions 
+   * Create a previous score using lblScore 
+   * Create button for play and quit 
+   * Create sprite list for instruction screen 
+* Intiate process for quit and play buttons 
+   * If play button/ up arrow key is clicked it will play game 
+   * If quit button/ down arrow key is clicked it will stop game 
+* Set up the game and start main loop
+   * Set up game caption/ title 
+   * Set while loop for instruction object 
+      * While user clicks play instructions will appear 
+      * If not it will quit 
+   * Create a statement that checks if the script is being run as the main program
+   * When you run game intro screen will appear 
+   * Previous score will be set to 0 because you haven’t played 
+   * You can click the up arrow key or play label to start 
+   * You can click the down arrow key or quit label to quit game
